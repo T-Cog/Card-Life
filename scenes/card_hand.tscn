@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/card_hand.gd" id="1_nl3xp"]
 [ext_resource type="PackedScene" uid="uid://c7isv5qiwegkf" path="res://scenes/card_template.tscn" id="1_s0mw8"]
-[ext_resource type="Texture2D" uid="uid://c4ceu36363cu" path="res://sprites/PLACEHOLDER_fonts/Icons_Placeholder/Briefcase.png" id="2_c55eb"]
+[ext_resource type="Texture2D" uid="uid://c4ceu36363cu" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Briefcase.png" id="2_c55eb"]
 
 [node name="card_hand" type="Node2D"]
 script = ExtResource("1_nl3xp")
@@ -17,18 +17,19 @@ cost_money = 45
 cost_energy = 6
 cost_time = 0.5
 
-[node name="card_template2" parent="CanvasLayer" node_paths=PackedStringArray("cardImage") instance=ExtResource("1_s0mw8")]
+[node name="card_template2" parent="CanvasLayer" instance=ExtResource("1_s0mw8")]
 visible = false
 position = Vector2(113, 180)
 cardName = "name 2"
 cardDescription = "This shit also testing. Lets see just how far I can strecth this text out for. I feel like it has to have passed the box by this point, but idk. Maybe it'll surprise me. Hopefully it doesn't break it somehow"
+cardImage = Object(Sprite2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":false,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(-126, 52),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"texture":ExtResource("2_c55eb"),"centered":true,"offset":Vector2(0, 0),"flip_h":false,"flip_v":false,"hframes":1,"vframes":1,"frame":0,"region_enabled":false,"region_rect":Rect2(0, 0, 0, 0),"region_filter_clip_enabled":false,"script":null)
+
 cost_money = 1568
 cost_energy = 44
 cost_time = 3.0
-cardImage = NodePath("../../Briefcase")
 
 [node name="Spawn" type="Node2D" parent="CanvasLayer"]
-position = Vector2(56, 27)
+position = Vector2(309, 168)
 
 [node name="Briefcase" type="Sprite2D" parent="."]
 visible = false

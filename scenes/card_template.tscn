@@ -1,27 +1,29 @@
-[gd_scene load_steps=11 format=3 uid="uid://c7isv5qiwegkf"]
+[gd_scene load_steps=12 format=3 uid="uid://c7isv5qiwegkf"]
 
 [ext_resource type="Script" path="res://scripts/card.gd" id="1_74oks"]
-[ext_resource type="Texture2D" uid="uid://b5ywhkpvfitwo" path="res://sprites/PLACEHOLDER_fonts/Cards_Placeholder/total_blank_front_white.png" id="1_hfcjv"]
-[ext_resource type="Texture2D" uid="uid://b4dojvpgkq3s7" path="res://sprites/PLACEHOLDER_fonts/Icons_Placeholder/Cash.png" id="2_765or"]
+[ext_resource type="Texture2D" uid="uid://b5ywhkpvfitwo" path="res://sprites/PLACEHOLDER_Sprites/Cards_Placeholder/total_blank_front_white.png" id="2_omara"]
 [ext_resource type="LabelSettings" uid="uid://dk5g3um13nwlp" path="res://fonts/font_settings/font_cost.tres" id="3_58o44"]
-[ext_resource type="Texture2D" uid="uid://mana6qq32bd7" path="res://sprites/PLACEHOLDER_fonts/Icons_Placeholder/Battery.png" id="4_m65lw"]
-[ext_resource type="Texture2D" uid="uid://bi1o4dmpth1y2" path="res://sprites/PLACEHOLDER_fonts/Icons_Placeholder/Flower2.png" id="5_yptnf"]
+[ext_resource type="Texture2D" uid="uid://b4dojvpgkq3s7" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Cash.png" id="3_mc2ut"]
+[ext_resource type="Texture2D" uid="uid://mana6qq32bd7" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Battery.png" id="5_m57bq"]
+[ext_resource type="Texture2D" uid="uid://bi1o4dmpth1y2" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Flower2.png" id="6_a5ehf"]
 [ext_resource type="LabelSettings" uid="uid://cd2hk7mx01co4" path="res://fonts/font_settings/font_name.tres" id="6_oaqwm"]
 [ext_resource type="FontFile" uid="uid://hw4xtho3tuld" path="res://fonts/PLACEHOLDER_fonts/cc.yal.6w4.ttf" id="7_32m72"]
-[ext_resource type="Texture2D" uid="uid://cy6emkrjdscw" path="res://sprites/PLACEHOLDER_fonts/Icons_Placeholder/Medicine.png" id="8_jvdit"]
+[ext_resource type="Texture2D" uid="uid://cy6emkrjdscw" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Medicine.png" id="9_xw8w1"]
+[ext_resource type="Texture2D" uid="uid://bvl83f627aywf" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Bottle.png" id="10_xfbot"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_katsn"]
 font = ExtResource("7_32m72")
 font_color = Color(0, 0, 0, 1)
 
 [node name="card_template" type="Node2D"]
-position = Vector2(320, 180)
 scale = Vector2(0.6, 0.6)
 script = ExtResource("1_74oks")
+cardImage = Object(Sprite2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(0, 0),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"texture":ExtResource("10_xfbot"),"centered":true,"offset":Vector2(0, 0),"flip_h":false,"flip_v":false,"hframes":1,"vframes":1,"frame":0,"region_enabled":false,"region_rect":Rect2(0, 0, 0, 0),"region_filter_clip_enabled":false,"script":null)
+
 
 [node name="BaseCardSprite" type="Sprite2D" parent="."]
 scale = Vector2(2.78333, 2.78333)
-texture = ExtResource("1_hfcjv")
+texture = ExtResource("2_omara")
 
 [node name="CostDisplay" type="Node2D" parent="."]
 position = Vector2(0, 63)
@@ -31,7 +33,7 @@ scale = Vector2(2.19715, 2.19715)
 position = Vector2(-18.964, 0)
 
 [node name="MoneyCostSprite" type="Sprite2D" parent="CostDisplay/MoneyCost"]
-texture = ExtResource("2_765or")
+texture = ExtResource("3_mc2ut")
 
 [node name="MoneyCostLabel" type="Label" parent="CostDisplay/MoneyCost"]
 offset_left = -9.10271
@@ -47,7 +49,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="EnergyCostSprite" type="Sprite2D" parent="CostDisplay/EnergyCost"]
 position = Vector2(0.455136, 0)
-texture = ExtResource("4_m65lw")
+texture = ExtResource("5_m57bq")
 
 [node name="EnergyCostLabel" type="Label" parent="CostDisplay/EnergyCost"]
 offset_left = -6.82703
@@ -65,7 +67,7 @@ position = Vector2(19.5709, 0)
 
 [node name="TimeCostSprite" type="Sprite2D" parent="CostDisplay/TimeCost"]
 position = Vector2(-0.910272, 0)
-texture = ExtResource("5_yptnf")
+texture = ExtResource("6_a5ehf")
 
 [node name="TimeCostLabel" type="Label" parent="CostDisplay/TimeCost"]
 offset_left = -8.9511
@@ -97,7 +99,7 @@ position = Vector2(105, -95)
 z_index = -1
 position = Vector2(63, 41)
 scale = Vector2(2.55999, 1.12)
-texture = ExtResource("1_hfcjv")
+texture = ExtResource("2_omara")
 
 [node name="DescriptionLabel" type="Label" parent="CardDescription"]
 offset_top = -1.0
@@ -112,6 +114,9 @@ autowrap_mode = 3
 
 [node name="CardImage" type="Node2D" parent="."]
 
-[node name="CardImageSprite" type="Sprite2D" parent="CardImage"]
+[node name="CardImageCanvas" type="Sprite2D" parent="CardImage"]
 scale = Vector2(6.08217, 6.08217)
-texture = ExtResource("8_jvdit")
+texture = ExtResource("9_xw8w1")
+
+[node name="CardImageSprite" type="Sprite2D" parent="CardImage"]
+texture = ExtResource("10_xfbot")

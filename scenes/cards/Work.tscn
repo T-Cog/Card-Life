@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cchsylmaow1iy"]
+
+[ext_resource type="PackedScene" uid="uid://c7isv5qiwegkf" path="res://scenes/card_template.tscn" id="1_oc3ec"]
+[ext_resource type="Texture2D" uid="uid://c4ceu36363cu" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Briefcase.png" id="2_0nvhk"]
+
+[node name="Work" type="Node2D"]
+
+[node name="card_template" parent="." instance=ExtResource("1_oc3ec")]
+cardName = "Work"
+cardDescription = "Go earn some cash"
+cardImage = Object(Sprite2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":false,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(0, 0),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"texture":ExtResource("2_0nvhk"),"centered":true,"offset":Vector2(0, 0),"flip_h":false,"flip_v":false,"hframes":1,"vframes":1,"frame":0,"region_enabled":false,"region_rect":Rect2(0, 0, 0, 0),"region_filter_clip_enabled":false,"script":null)
+
+cost_money = 115
+cost_energy = 20
+cost_time = 8.0
+
+[node name="Card Image" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_0nvhk")

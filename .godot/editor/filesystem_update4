@@ -4,3 +4,5 @@ res://scenes/font_cost.tres
 res://scripts/card.gd
 res://scenes/card_hand.tscn
 res://scripts/card_hand.gd
+res://scenes/cards/Meds.tscn
+res://scenes/cards/Work.tscn
