@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://c7isv5qiwegkf"]
+
+[node name="card_template" type="Node2D"]
