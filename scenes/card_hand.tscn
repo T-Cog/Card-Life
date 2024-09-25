@@ -10,6 +10,7 @@ script = ExtResource("1_nl3xp")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="card_template" parent="CanvasLayer" instance=ExtResource("1_s0mw8")]
+visible = false
 cardName = "name 1"
 cardDescription = "this is a test of the description box"
 cost_money = 45
@@ -17,6 +18,7 @@ cost_energy = 6
 cost_time = 0.5
 
 [node name="card_template2" parent="CanvasLayer" node_paths=PackedStringArray("cardImage") instance=ExtResource("1_s0mw8")]
+visible = false
 position = Vector2(113, 180)
 cardName = "name 2"
 cardDescription = "This shit also testing. Lets see just how far I can strecth this text out for. I feel like it has to have passed the box by this point, but idk. Maybe it'll surprise me. Hopefully it doesn't break it somehow"
@@ -26,6 +28,7 @@ cost_time = 3.0
 cardImage = NodePath("../../Briefcase")
 
 [node name="Spawn" type="Node2D" parent="CanvasLayer"]
+position = Vector2(56, 27)
 
 [node name="Briefcase" type="Sprite2D" parent="."]
 visible = false
@@ -44,3 +47,4 @@ offset_bottom = 71.0
 text = "create card 2"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
