@@ -1,3 +1,122 @@
-[gd_scene format=3 uid="uid://c7isv5qiwegkf"]
+[gd_scene load_steps=11 format=3 uid="uid://c7isv5qiwegkf"]
+
+[ext_resource type="Script" path="res://scripts/card.gd" id="1_74oks"]
+[ext_resource type="Texture2D" uid="uid://b5ywhkpvfitwo" path="res://sprites/PLACEHOLDER_fonts/Cards_Placeholder/total_blank_front_white.png" id="1_hfcjv"]
+[ext_resource type="Texture2D" uid="uid://b4dojvpgkq3s7" path="res://sprites/PLACEHOLDER_fonts/Icons_Placeholder/Cash.png" id="2_765or"]
+[ext_resource type="LabelSettings" uid="uid://dk5g3um13nwlp" path="res://fonts/font_settings/font_cost.tres" id="3_58o44"]
+[ext_resource type="Texture2D" uid="uid://mana6qq32bd7" path="res://sprites/PLACEHOLDER_fonts/Icons_Placeholder/Battery.png" id="4_m65lw"]
+[ext_resource type="Texture2D" uid="uid://bi1o4dmpth1y2" path="res://sprites/PLACEHOLDER_fonts/Icons_Placeholder/Flower2.png" id="5_yptnf"]
+[ext_resource type="LabelSettings" uid="uid://cd2hk7mx01co4" path="res://fonts/font_settings/font_name.tres" id="6_oaqwm"]
+[ext_resource type="FontFile" uid="uid://hw4xtho3tuld" path="res://fonts/PLACEHOLDER_fonts/cc.yal.6w4.ttf" id="7_32m72"]
+[ext_resource type="Texture2D" uid="uid://cy6emkrjdscw" path="res://sprites/PLACEHOLDER_fonts/Icons_Placeholder/Medicine.png" id="8_jvdit"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_katsn"]
+font = ExtResource("7_32m72")
+font_color = Color(0, 0, 0, 1)
 
 [node name="card_template" type="Node2D"]
+position = Vector2(320, 180)
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_74oks")
+cardName = null
+cardDescription = null
+cost_money = null
+cost_energy = null
+cost_time = null
+
+[node name="BaseCardSprite" type="Sprite2D" parent="."]
+scale = Vector2(2.78333, 2.78333)
+texture = ExtResource("1_hfcjv")
+
+[node name="CostDisplay" type="Node2D" parent="."]
+position = Vector2(0, 63)
+scale = Vector2(2.19715, 2.19715)
+
+[node name="MoneyCost" type="Node2D" parent="CostDisplay"]
+position = Vector2(-18.964, 0)
+
+[node name="MoneyCostSprite" type="Sprite2D" parent="CostDisplay/MoneyCost"]
+texture = ExtResource("2_765or")
+
+[node name="MoneyCostLabel" type="Label" parent="CostDisplay/MoneyCost"]
+offset_left = -9.10271
+offset_top = 5.91676
+offset_right = 8.89729
+offset_bottom = 17.4518
+text = "$100"
+label_settings = ExtResource("3_58o44")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="EnergyCost" type="Node2D" parent="CostDisplay"]
+
+[node name="EnergyCostSprite" type="Sprite2D" parent="CostDisplay/EnergyCost"]
+position = Vector2(0.455136, 0)
+texture = ExtResource("4_m65lw")
+
+[node name="EnergyCostLabel" type="Label" parent="CostDisplay/EnergyCost"]
+offset_left = -6.82703
+offset_top = 6.22018
+offset_right = 8.17297
+offset_bottom = 17.7552
+text = "10
+"
+label_settings = ExtResource("3_58o44")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TimeCost" type="Node2D" parent="CostDisplay"]
+position = Vector2(19.5709, 0)
+
+[node name="TimeCostSprite" type="Sprite2D" parent="CostDisplay/TimeCost"]
+position = Vector2(-0.910272, 0)
+texture = ExtResource("5_yptnf")
+
+[node name="TimeCostLabel" type="Label" parent="CostDisplay/TimeCost"]
+offset_left = -8.9511
+offset_top = 6.22018
+offset_right = 6.0489
+offset_bottom = 17.7552
+text = "1h"
+label_settings = ExtResource("3_58o44")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CardName" type="Node2D" parent="."]
+position = Vector2(-64, -95)
+scale = Vector2(2.93, 2.93)
+
+[node name="NameLabel" type="Label" parent="CardName"]
+offset_right = 44.0
+offset_bottom = 11.205
+text = "Card Name
+"
+label_settings = ExtResource("6_oaqwm")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CardDescription" type="Node2D" parent="."]
+position = Vector2(105, -95)
+
+[node name="DescriptionBaseSprite" type="Sprite2D" parent="CardDescription"]
+z_index = -1
+position = Vector2(63, 41)
+scale = Vector2(2.55999, 1.12)
+texture = ExtResource("1_hfcjv")
+
+[node name="DescriptionLabel" type="Label" parent="CardDescription"]
+offset_top = -1.0
+offset_right = 95.025
+offset_bottom = 61.645
+scale = Vector2(1.33102, 1.33102)
+text = "Test Description Test Description Test Description Test Description Test Description
+"
+label_settings = SubResource("LabelSettings_katsn")
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CardImage" type="Node2D" parent="."]
+
+[node name="CardImageSprite" type="Sprite2D" parent="CardImage"]
+scale = Vector2(6.08217, 6.08217)
+texture = ExtResource("8_jvdit")

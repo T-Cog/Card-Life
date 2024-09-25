@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cd2hk7mx01co4"]
+
+[ext_resource type="FontFile" uid="uid://hw4xtho3tuld" path="res://fonts/PLACEHOLDER_fonts/cc.yal.6w4.ttf" id="1_y3xnd"]
+
+[resource]
+font = ExtResource("1_y3xnd")
+font_color = Color(0, 0, 0, 1)
+shadow_color = Color(0.847059, 0.847059, 0.847059, 1)
+shadow_offset = Vector2(0.22, 1)

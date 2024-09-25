@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dk5g3um13nwlp"]
+
+[ext_resource type="FontFile" uid="uid://hw4xtho3tuld" path="res://fonts/PLACEHOLDER_fonts/cc.yal.6w4.ttf" id="1_nedsv"]
+
+[resource]
+font = ExtResource("1_nedsv")
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+outline_color = Color(0.909804, 0.909804, 0.909804, 1)
