@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c7isv5qiwegkf"]
+[gd_scene load_steps=11 format=3 uid="uid://c7isv5qiwegkf"]
 
 [ext_resource type="Script" path="res://scripts/card.gd" id="1_74oks"]
 [ext_resource type="Texture2D" uid="uid://b5ywhkpvfitwo" path="res://sprites/PLACEHOLDER_Sprites/Cards_Placeholder/total_blank_front_white.png" id="2_omara"]
@@ -9,7 +9,6 @@
 [ext_resource type="LabelSettings" uid="uid://cd2hk7mx01co4" path="res://fonts/font_settings/font_name.tres" id="6_oaqwm"]
 [ext_resource type="FontFile" uid="uid://hw4xtho3tuld" path="res://fonts/PLACEHOLDER_fonts/cc.yal.6w4.ttf" id="7_32m72"]
 [ext_resource type="Texture2D" uid="uid://cy6emkrjdscw" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Medicine.png" id="9_xw8w1"]
-[ext_resource type="Texture2D" uid="uid://bvl83f627aywf" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Bottle.png" id="10_xfbot"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_katsn"]
 font = ExtResource("7_32m72")
@@ -18,8 +17,7 @@ font_color = Color(0, 0, 0, 1)
 [node name="card_template" type="Node2D"]
 scale = Vector2(0.6, 0.6)
 script = ExtResource("1_74oks")
-cardImage = Object(Sprite2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(0, 0),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"texture":ExtResource("10_xfbot"),"centered":true,"offset":Vector2(0, 0),"flip_h":false,"flip_v":false,"hframes":1,"vframes":1,"frame":0,"region_enabled":false,"region_rect":Rect2(0, 0, 0, 0),"region_filter_clip_enabled":false,"script":null)
-
+cardImage = ExtResource("9_xw8w1")
 
 [node name="BaseCardSprite" type="Sprite2D" parent="."]
 scale = Vector2(2.78333, 2.78333)
@@ -115,8 +113,5 @@ autowrap_mode = 3
 [node name="CardImage" type="Node2D" parent="."]
 
 [node name="CardImageCanvas" type="Sprite2D" parent="CardImage"]
+position = Vector2(0, -6.66667)
 scale = Vector2(6.08217, 6.08217)
-texture = ExtResource("9_xw8w1")
-
-[node name="CardImageSprite" type="Sprite2D" parent="CardImage"]
-texture = ExtResource("10_xfbot")
