@@ -1,5 +1,2 @@
-res://scenes/card_hand.tscn
-res://scripts/card.gd
-res://scenes/card_template.tscn
-res://scenes/cards/Meds.tscn
-res://scenes/cards/Work.tscn
+res://scenes/hand.tscn
+res://scenes/hand.gd

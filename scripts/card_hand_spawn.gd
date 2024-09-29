@@ -17,8 +17,8 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	var card: Card = card_scene.instantiate()
-	spawn_point.add_child(card)
+	var medsCard = card_meds.instantiate()
+	spawn_point.add_child(medsCard)
 	#card.set_card_values(1, 2, 3, "spawn name", "spawn description", null)
 
 

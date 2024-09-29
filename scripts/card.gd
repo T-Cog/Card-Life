@@ -1,3 +1,4 @@
+@tool
 class_name Card extends Node2D 
 
 
@@ -20,8 +21,7 @@ class_name Card extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	set_card_values(cost_money, cost_energy, cost_time, 
-	cardName, cardDescription, cardImage)
+	pass
 	
 	
 
@@ -37,7 +37,11 @@ _name: String, _description: String, _image: Texture2D):
 	cardImageCanvas.texture = _image
 	
 
+func activate():
+	pass
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	set_card_values(cost_money, cost_energy, cost_time, 
+	cardName, cardDescription, cardImage)
 	

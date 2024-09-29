@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5cjedy2ua87a"]
 
-[ext_resource type="Script" path="res://scripts/card_hand.gd" id="1_nl3xp"]
+[ext_resource type="Script" path="res://scripts/card_hand_spawn.gd" id="1_nl3xp"]
 [ext_resource type="PackedScene" uid="uid://c7isv5qiwegkf" path="res://scenes/card_template.tscn" id="1_s0mw8"]
 [ext_resource type="Texture2D" uid="uid://c4ceu36363cu" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Briefcase.png" id="2_c55eb"]
 
