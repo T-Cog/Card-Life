@@ -1,6 +1,9 @@
 @tool
 class_name Card extends Node2D 
 
+signal mouse_entered()
+signal mouse_exited()
+
 @export var cardName: String = "Card Name" #Stores name of card
 @export var cardDescription: String = "Card Description" #Stores pop-up description
 @export var cardImage: Texture2D #Stores card art sprite 
@@ -17,11 +20,11 @@ class_name Card extends Node2D
 @onready var nameLabel: Label = $CardName/NameLabel
 @onready var descriptionLabel: Label = $CardDescription/DescriptionLabel
 @onready var cardImageCanvas: Sprite2D = $CardImage/CardImageCanvas
+@onready var description_node: Node2D = $CardDescription
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-	
+	description_node.visible = false
 	
 
 #Adjusts labels and image to show costs and sprite set in-editor
@@ -36,6 +39,13 @@ _name: String, _description: String, _image: Texture2D):
 	cardImageCanvas.texture = _image
 	
 
+func highlight():
+	description_node.visible = true
+	
+
+func unhighlight():
+	description_node.visible = false
+
 func activate():
 	pass
 
@@ -44,3 +54,19 @@ func _process(delta):
 	set_card_values(cost_money, cost_energy, cost_time, 
 	cardName, cardDescription, cardImage)
 	
+
+
+func _on_area_2d_mouse_entered():
+	mouse_entered.emit()
+	highlight()
+	
+
+
+func _on_area_2d_mouse_exited():
+	mouse_exited.emit()
+	unhighlight()
+	
+
+
+func _on_area_2d_input_event(viewport, event, shape_idx):
+	pass # Replace with function body.

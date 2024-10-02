@@ -16,8 +16,12 @@ func add_card(card: Node2D):
 	add_child(card)
 	reposition_cards()
 	
-func remove_card(index: int):
-	pass
+func remove_card(index: int) -> Node2D:
+	var removing_card = hand[index]
+	hand.remove_at(index)
+	remove_child(removing_card)
+	reposition_cards()
+	return removing_card
 
 func reposition_cards():
 	var card_spread = min(angle_limit / hand.size(), max_card_spread_angle) 
@@ -39,6 +43,10 @@ func _update_card_transform(card: Node2D, angle_in_drag: float):
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+
+func _input(event):
+	if event.is_action_pressed("select_card"):
+		pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
