@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5cjedy2ua87a"]
+[gd_scene load_steps=5 format=3 uid="uid://c5cjedy2ua87a"]
 
 [ext_resource type="Script" path="res://scripts/card_hand_spawn.gd" id="1_nl3xp"]
 [ext_resource type="PackedScene" uid="uid://c7isv5qiwegkf" path="res://scenes/card_template.tscn" id="1_s0mw8"]
 [ext_resource type="Texture2D" uid="uid://c4ceu36363cu" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Briefcase.png" id="2_c55eb"]
+[ext_resource type="PackedScene" uid="uid://crxwvyu0q8iw8" path="res://scenes/hand.tscn" id="3_r1ms1"]
 
 [node name="card_hand" type="Node2D"]
 script = ExtResource("1_nl3xp")
@@ -26,8 +27,10 @@ cost_money = 1568
 cost_energy = 44
 cost_time = 3.0
 
-[node name="Spawn" type="Node2D" parent="CanvasLayer"]
-position = Vector2(309, 168)
+[node name="Hand" parent="CanvasLayer" instance=ExtResource("3_r1ms1")]
+position = Vector2(320, 1250)
+angle_limit = 20.0
+max_card_spread_angle = 3.0
 
 [node name="Briefcase" type="Sprite2D" parent="."]
 visible = false

@@ -1,10 +1,10 @@
 @tool
-extends Node2D
+class_name Hand extends Node2D
 
-@export var hand_radius: int = 100
+@export var hand_radius: int = 1000
 @export var card_angle: float = -90
 @export var angle_limit: float = 30
-@export var max_card_spread_angle: float = 5
+@export var max_card_spread_angle: float = 60
 
 @onready var test_card = $TestCard
 @onready var collision_shape: CollisionShape2D = $DebugShape
@@ -12,13 +12,19 @@ extends Node2D
 var hand: Array = []
 
 func add_card(card: Node2D):
-	hand.push_back((card_angle))
+	hand.push_back((card))
+	add_child(card)
+	reposition_cards()
+	
+func remove_card(index: int):
 	pass
 
 func reposition_cards():
 	var card_spread = min(angle_limit / hand.size(), max_card_spread_angle) 
+	var current_angle = -(card_spread * (hand.size() - 1))/2 - 90 
 	for card in hand :
-		pass
+		_update_card_transform(card, current_angle)
+		current_angle += card_spread
 
 func get_card_position(angle_in_deg: float) -> Vector2:
 	var x: float = hand_radius * cos(deg_to_rad(angle_in_deg))
@@ -26,9 +32,9 @@ func get_card_position(angle_in_deg: float) -> Vector2:
 	
 	return Vector2(x, y)
 
-func _card_transform_update(card: Node2D, angle_in_drag: float):
-	card.set_position(get_card_position(card_angle))
-	card.set_rotation(-deg_to_rad(-card_angle - 90))
+func _update_card_transform(card: Node2D, angle_in_drag: float):
+	card.set_position(get_card_position(angle_in_drag))
+	card.set_rotation(-deg_to_rad(-angle_in_drag - 90))
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,7 +1,6 @@
 @tool
 class_name Card extends Node2D 
 
-
 @export var cardName: String = "Card Name" #Stores name of card
 @export var cardDescription: String = "Card Description" #Stores pop-up description
 @export var cardImage: Texture2D #Stores card art sprite 
