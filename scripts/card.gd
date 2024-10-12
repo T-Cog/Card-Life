@@ -22,6 +22,8 @@ signal mouse_exited()
 @onready var cardImageCanvas: Sprite2D = $CardImage/CardImageCanvas
 @onready var description_node: Node2D = $CardDescription
 
+@onready var resource_manager: resource = $"/root/card_hand/resource_manager"
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	description_node.visible = false
@@ -49,11 +51,28 @@ func unhighlight():
 func activate():
 	pass
 
+func _spendResource():
+	if resource_manager._can_play_card(cost_money, cost_energy, cost_time):
+		resource_manager._calculateResources(cost_money, cost_energy, cost_time)
+		print("played it")
+	else:
+		print("didn't work")
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	set_card_values(cost_money, cost_energy, cost_time, 
 	cardName, cardDescription, cardImage)
 	
+
+func _input(event):
+	# Check if the "select_card" action is triggered
+	if Input.is_action_just_pressed("select_card") and is_mouse_over():
+		_spendResource()
+		print("card clicked")
+		
+
+func is_mouse_over() -> bool:
+	return get_global_mouse_position().distance_to(global_position) < 100  # Adjust for your card's size
 
 
 func _on_area_2d_mouse_entered():

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bief0ma43wgt0"]
+
+[ext_resource type="PackedScene" uid="uid://c7isv5qiwegkf" path="res://scenes/card_template.tscn" id="1_eo6br"]
+[ext_resource type="Texture2D" uid="uid://bxrdsaj18y1we" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Cutlery.png" id="2_2humo"]
+
+[node name="Eat" type="Node2D"]
+
+[node name="card_template" parent="." instance=ExtResource("1_eo6br")]
+cardName = "Eat"
+cardDescription = "Time for dinner"
+cardImage = ExtResource("2_2humo")
+cost_money = 0
+cost_energy = 15
+cost_time = 0.5

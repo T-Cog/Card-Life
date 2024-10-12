@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkkkkitsgtnpl"]
+
+[ext_resource type="PackedScene" uid="uid://c7isv5qiwegkf" path="res://scenes/card_template.tscn" id="1_6ngpf"]
+[ext_resource type="Texture2D" uid="uid://eh5kj1crcbr4" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Gamepad3.png" id="2_o5w4j"]
+
+[node name="PlayGames" type="Node2D"]
+
+[node name="card_template" parent="." instance=ExtResource("1_6ngpf")]
+cardName = "Play Game"
+cardDescription = "Unwind with some gaming"
+cardImage = ExtResource("2_o5w4j")
+cost_money = 0
+cost_energy = 8
+cost_time = 3.0

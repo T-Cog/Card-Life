@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://te4yau7o80ae"]
+
+[ext_resource type="Script" path="res://scripts/resource_manager.gd" id="1_x3a1k"]
+
+[node name="resource_manager" type="Node2D"]
+script = ExtResource("1_x3a1k")
+
+[node name="MoneyDisplay" type="Node2D" parent="."]
+
+[node name="MoneyLabel" type="Label" parent="MoneyDisplay"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "$100"
+
+[node name="EnergyDisplay" type="Node2D" parent="."]
+position = Vector2(0, 21)
+
+[node name="EnergyLabel" type="Label" parent="EnergyDisplay"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Energy 300"
+
+[node name="TimeDisplay" type="Node2D" parent="."]
+position = Vector2(0, 42)
+
+[node name="TimeLabel" type="Label" parent="TimeDisplay"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Time 24h"

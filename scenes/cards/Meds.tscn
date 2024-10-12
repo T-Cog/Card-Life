@@ -9,4 +9,4 @@ cardName = "Meds"
 cardDescription = "Pick up your perscription"
 cost_money = 45
 cost_energy = 5
-cost_time = 0.5
+cost_time = 0.0

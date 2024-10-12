@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5cjedy2ua87a"]
+[gd_scene load_steps=6 format=3 uid="uid://c5cjedy2ua87a"]
 
 [ext_resource type="Script" path="res://scripts/card_hand_spawn.gd" id="1_nl3xp"]
 [ext_resource type="PackedScene" uid="uid://c7isv5qiwegkf" path="res://scenes/card_template.tscn" id="1_s0mw8"]
 [ext_resource type="Texture2D" uid="uid://c4ceu36363cu" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Briefcase.png" id="2_c55eb"]
 [ext_resource type="PackedScene" uid="uid://crxwvyu0q8iw8" path="res://scenes/hand.tscn" id="3_r1ms1"]
+[ext_resource type="PackedScene" uid="uid://te4yau7o80ae" path="res://scenes/resource_manager.tscn" id="5_i0wvw"]
 
 [node name="card_hand" type="Node2D"]
 script = ExtResource("1_nl3xp")
@@ -47,6 +48,10 @@ offset_top = 40.0
 offset_right = 109.0
 offset_bottom = 71.0
 text = "create card 2"
+
+[node name="resource_manager" parent="." instance=ExtResource("5_i0wvw")]
+position = Vector2(544, 0)
+resource_money = 500
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

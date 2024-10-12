@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dik7csxmdacha"]
+
+[ext_resource type="PackedScene" uid="uid://c7isv5qiwegkf" path="res://scenes/card_template.tscn" id="1_cl4rc"]
+[ext_resource type="Texture2D" uid="uid://ce1xsjjfgdpam" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Pencil.png" id="2_4dpl7"]
+
+[node name="Write" type="Node2D"]
+
+[node name="card_template" parent="." instance=ExtResource("1_cl4rc")]
+cardName = "Write"
+cardDescription = "Work on your story"
+cardImage = ExtResource("2_4dpl7")
+cost_money = 0
+cost_energy = 60
+cost_time = 2.0

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dooh7e2fp71s8"]
+
+[ext_resource type="PackedScene" uid="uid://c7isv5qiwegkf" path="res://scenes/card_template.tscn" id="1_qak1e"]
+[ext_resource type="Texture2D" uid="uid://c7rwbya575xjf" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Basket.png" id="2_i86jy"]
+
+[node name="Shop" type="Node2D"]
+
+[node name="card_template" parent="." instance=ExtResource("1_qak1e")]
+cardName = "Shop"
+cardDescription = "Get some groceries"
+cardImage = ExtResource("2_i86jy")
+cost_money = 80
+cost_energy = 40
+cost_time = 2.0
