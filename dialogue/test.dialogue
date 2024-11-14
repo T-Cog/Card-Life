@@ -1,9 +1,22 @@
 ~ start
 Jude: [[Hi|Hello|Howdy]]! Its me, Jude from Card Life.
+Jude: This is what choices might be like in the future.
+
 - First one
 	Jude: You picked the first one.
 - Second one
 	Jude: You picked the second one.
+
+Jude: Some dialogue will cost you resources to select.
+- Spend 5 energy
+	Jude: That was an exhausting choice. Can't believe you put in so much hard work.
+	Jude: I think I must have only 7 energy left.
+
+- Spend $2
+	Jude: Wow. Microtransactions in your school project? Times have gotten tough.
+	Jude: I've only got $3 left. I might be a bit short for the bus now.
+
+Jude: Anyways, I think you get the idea.
 
 - End the conversation => END
 => END

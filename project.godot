@@ -18,6 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+DialogueStateManager="*res://scripts/dialogue_stateManager.gd"
+
+[dialogue_manager]
+
+general/states=["DialogueStateManager"]
+general/balloon_path="res://scenes/balloon.tscn"
 
 [display]
 

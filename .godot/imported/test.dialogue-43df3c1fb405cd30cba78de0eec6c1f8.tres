@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ar6jj"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_k6b8e"]
 
 [resource]
-script = ExtResource("1_ar6jj")
+script = ExtResource("1_k6b8e")
 using_states = PackedStringArray()
 titles = {
 "start": "2"
@@ -17,6 +17,109 @@ lines = {
 "text": "start",
 "type": &"title"
 },
+"10": {
+"character": "Jude",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Some dialogue will cost you resources to select.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Some dialogue will cost you resources to select.",
+"type": &"dialogue"
+},
+"11": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"next_id_after": "19",
+"notes": "",
+"responses": PackedStringArray("11", "15"),
+"tags": PackedStringArray(),
+"text": "Spend 5 energy",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Spend 5 energy",
+"type": &"response"
+},
+"12": {
+"character": "Jude",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"notes": "",
+"parent_id": "11",
+"tags": PackedStringArray(),
+"text": "That was an exhausting choice. Can't believe you put in so much hard work.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That was an exhausting choice. Can't believe you put in so much hard work.",
+"type": &"dialogue"
+},
+"13": {
+"character": "Jude",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "19",
+"notes": "",
+"parent_id": "11",
+"tags": PackedStringArray(),
+"text": "I think I must have only 7 energy left.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I think I must have only 7 energy left.",
+"type": &"dialogue"
+},
+"15": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"next_id_after": "19",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Spend $2",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Spend $2",
+"type": &"response"
+},
+"16": {
+"character": "Jude",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "Wow. Microtransactions in your school project? Times have gotten tough.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wow. Microtransactions in your school project? Times have gotten tough.",
+"type": &"dialogue"
+},
+"17": {
+"character": "Jude",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "19",
+"notes": "",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "I've only got $3 left. I might be a bit short for the bus now.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I've only got $3 left. I might be a bit short for the bus now.",
+"type": &"dialogue"
+},
+"19": {
+"character": "Jude",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "21",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Anyways, I think you get the idea.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Anyways, I think you get the idea.",
+"type": &"dialogue"
+},
 "2": {
 "character": "Jude",
 "character_replacements": Array[Dictionary]([]),
@@ -29,31 +132,36 @@ lines = {
 "translation_key": "[[Hi|Hello|Howdy]]! Its me, Jude from Card Life.",
 "type": &"dialogue"
 },
-"3": {
+"21": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "3",
-"next_id": "4",
-"next_id_after": "9",
+"id": "21",
+"next_id": "end",
+"next_id_after": "22",
 "notes": "",
-"responses": PackedStringArray("3", "5", "8"),
+"responses": PackedStringArray("21"),
 "tags": PackedStringArray(),
-"text": "First one",
+"text": "End the conversation",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "First one",
+"translation_key": "End the conversation",
 "type": &"response"
 },
-"4": {
+"22": {
+"id": "22",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
 "character": "Jude",
 "character_replacements": Array[Dictionary]([]),
-"id": "4",
-"next_id": "9",
+"id": "3",
+"next_id": "5",
 "notes": "",
-"parent_id": "3",
 "tags": PackedStringArray(),
-"text": "You picked the first one.",
+"text": "This is what choices might be like in the future.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "You picked the first one.",
+"translation_key": "This is what choices might be like in the future.",
 "type": &"dialogue"
 },
 "5": {
@@ -61,7 +169,34 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "5",
 "next_id": "6",
-"next_id_after": "9",
+"next_id_after": "10",
+"notes": "",
+"responses": PackedStringArray("5", "7"),
+"tags": PackedStringArray(),
+"text": "First one",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "First one",
+"type": &"response"
+},
+"6": {
+"character": "Jude",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "10",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "You picked the first one.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You picked the first one.",
+"type": &"dialogue"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"next_id_after": "10",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Second one",
@@ -69,45 +204,39 @@ lines = {
 "translation_key": "Second one",
 "type": &"response"
 },
-"6": {
+"8": {
 "character": "Jude",
 "character_replacements": Array[Dictionary]([]),
-"id": "6",
-"next_id": "9",
+"id": "8",
+"next_id": "10",
 "notes": "",
-"parent_id": "5",
+"parent_id": "7",
 "tags": PackedStringArray(),
 "text": "You picked the second one.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "You picked the second one.",
 "type": &"dialogue"
-},
-"8": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "8",
-"next_id": "end",
-"next_id_after": "9",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "End the conversation",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "End the conversation",
-"type": &"response"
-},
-"9": {
-"id": "9",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
 }
 }
 raw_text = "~ start
 Jude: [[Hi|Hello|Howdy]]! Its me, Jude from Card Life.
+Jude: This is what choices might be like in the future.
+
 - First one
 	Jude: You picked the first one.
 - Second one
 	Jude: You picked the second one.
+
+Jude: Some dialogue will cost you resources to select.
+- Spend 5 energy
+	Jude: That was an exhausting choice. Can't believe you put in so much hard work.
+	Jude: I think I must have only 7 energy left.
+
+- Spend $2
+	Jude: Wow. Microtransactions in your school project? Times have gotten tough.
+	Jude: I've only got $3 left. I might be a bit short for the bus now.
+
+Jude: Anyways, I think you get the idea.
 
 - End the conversation => END
 => END"

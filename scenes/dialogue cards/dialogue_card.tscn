@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://mn4kk8oki8iu"]
+
+[ext_resource type="Texture2D" uid="uid://b5ywhkpvfitwo" path="res://sprites/PLACEHOLDER_Sprites/Cards_Placeholder/total_blank_front_white.png" id="1_x8gb8"]
+[ext_resource type="LabelSettings" uid="uid://cd2hk7mx01co4" path="res://fonts/font_settings/font_name.tres" id="2_yuo6t"]
+[ext_resource type="Texture2D" uid="uid://mana6qq32bd7" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Battery.png" id="3_d831n"]
+[ext_resource type="LabelSettings" uid="uid://dk5g3um13nwlp" path="res://fonts/font_settings/font_cost.tres" id="4_ayafh"]
+[ext_resource type="Texture2D" uid="uid://drf377cse66ge" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/pixel-art-speech-bubble-png-3473644413.png" id="5_4qfqj"]
+
+[node name="dialogue_card" type="Node2D"]
+
+[node name="TotalBlankFrontWhite" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(4.83835, 4.83835)
+texture = ExtResource("1_x8gb8")
+
+[node name="TextLabel" type="Label" parent="."]
+offset_left = -146.0
+offset_top = -190.0
+offset_right = -65.84
+offset_bottom = -145.0
+scale = Vector2(3.64, 3.64)
+text = "\"It was our anniversary tonight.\""
+label_settings = ExtResource("2_yuo6t")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Battery" type="Sprite2D" parent="."]
+position = Vector2(1, 101)
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("3_d831n")
+
+[node name="EnergyCostLabel" type="Label" parent="Battery"]
+offset_left = -6.94445
+offset_top = 7.22223
+offset_right = 8.05555
+offset_bottom = 18.7572
+text = "10"
+label_settings = ExtResource("4_ayafh")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Pixel-art-speech-bubble-png-3473644413" type="Sprite2D" parent="."]
+position = Vector2(0, 17)
+scale = Vector2(0.055, 0.055)
+texture = ExtResource("5_4qfqj")

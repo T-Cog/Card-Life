@@ -84,8 +84,10 @@ position = Vector2(-64, -95)
 scale = Vector2(2.93, 2.93)
 
 [node name="NameLabel" type="Label" parent="CardName"]
-offset_right = 44.0
-offset_bottom = 11.205
+offset_left = 0.0726294
+offset_top = -0.232352
+offset_right = 44.0726
+offset_bottom = 10.9726
 text = "Card Name"
 label_settings = ExtResource("6_oaqwm")
 horizontal_alignment = 1
