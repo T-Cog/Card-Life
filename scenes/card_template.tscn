@@ -18,7 +18,7 @@ font_color = Color(0, 0, 0, 1)
 size = Vector2(163.333, 231.667)
 
 [node name="card_template" type="Node2D"]
-scale = Vector2(0.6, 0.6)
+scale = Vector2(1.47365, 1.47365)
 script = ExtResource("1_74oks")
 cardImage = ExtResource("9_xw8w1")
 

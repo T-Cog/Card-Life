@@ -1,0 +1,9 @@
+~ start
+Jude: [[Hi|Hello|Howdy]]! Its me, Jude from Card Life.
+- First one
+	Jude: You picked the first one.
+- Second one
+	Jude: You picked the second one.
+
+- End the conversation => END
+=> END

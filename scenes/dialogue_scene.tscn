@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmd8cn1a2olc7"]
+
+[ext_resource type="Script" path="res://scripts/dialogue_input.gd" id="1_flkcl"]
+
+[node name="Dialogue Scene" type="Node2D"]
+position = Vector2(-361, -660)
+script = ExtResource("1_flkcl")

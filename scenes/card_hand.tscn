@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5cjedy2ua87a"]
+[gd_scene load_steps=5 format=3 uid="uid://c5cjedy2ua87a"]
 
 [ext_resource type="Script" path="res://scripts/card_hand_spawn.gd" id="1_nl3xp"]
 [ext_resource type="PackedScene" uid="uid://c7isv5qiwegkf" path="res://scenes/card_template.tscn" id="1_s0mw8"]
-[ext_resource type="Texture2D" uid="uid://c4ceu36363cu" path="res://sprites/PLACEHOLDER_Sprites/Icons_Placeholder/Briefcase.png" id="2_c55eb"]
 [ext_resource type="PackedScene" uid="uid://crxwvyu0q8iw8" path="res://scenes/hand.tscn" id="3_r1ms1"]
 [ext_resource type="PackedScene" uid="uid://te4yau7o80ae" path="res://scenes/resource_manager.tscn" id="5_i0wvw"]
 
@@ -29,14 +28,10 @@ cost_energy = 44
 cost_time = 3.0
 
 [node name="Hand" parent="CanvasLayer" instance=ExtResource("3_r1ms1")]
-position = Vector2(320, 1250)
+position = Vector2(640, 1250)
+hand_radius = 2200
 angle_limit = 20.0
-max_card_spread_angle = 3.0
-
-[node name="Briefcase" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-126, 52)
-texture = ExtResource("2_c55eb")
+max_card_spread_angle = 20.0
 
 [node name="Button" type="Button" parent="."]
 offset_right = 8.0
@@ -50,7 +45,7 @@ offset_bottom = 71.0
 text = "create card 2"
 
 [node name="resource_manager" parent="." instance=ExtResource("5_i0wvw")]
-position = Vector2(544, 0)
+position = Vector2(1176, 0)
 resource_money = 500
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
